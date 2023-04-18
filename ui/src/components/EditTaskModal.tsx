@@ -29,12 +29,12 @@ export default function EditTaskModal({task, taskEdited}: IEditTaskModal) {
     return (
       <>
         <Button variant="warning" onClick={handleShow}>
-          Edit
+          Editar
         </Button>
   
         <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton>
-            <Modal.Title>Task Edit</Modal.Title>
+            <Modal.Title>Editar Listado</Modal.Title>
           </Modal.Header>
           <Modal.Body>
           <form onSubmit={handleSubmit(onSubmit)}>
@@ -47,13 +47,13 @@ export default function EditTaskModal({task, taskEdited}: IEditTaskModal) {
             </div>
             <div className="row">
                 <div className="form-group col-md-6">
-                    <label htmlFor="task">Task</label>
+                    <label htmlFor="task">Modelo</label>
                     <input {...register("task")} type="text" className="form-control" defaultValue={task.task} name="task" id="task" placeholder="Create a Task" />
                 </div>
             </div>
             <div className="row">
                 <div className="form-group col-md-6">
-                    <label htmlFor="assignee">Assignee</label>
+                    <label htmlFor="assignee">Descripcion</label>
                     <input {...register("assignee")} type="text" className="form-control" defaultValue={task.assignee} name="assignee" id="assignee" placeholder="Assignee" />
                 </div>
             </div>
@@ -61,9 +61,9 @@ export default function EditTaskModal({task, taskEdited}: IEditTaskModal) {
                 <div className="form-group col-md-6">
                     <label htmlFor="status">Status:</label>
                     <select {...register("status")} name="status" defaultValue={task.status} className="form-control" id="status">
-                        <option>To Be Done</option>
-                        <option>In Progress</option>
-                        <option>Completed</option>
+                        <option>Funcionando</option>
+                        <option>Fuera de servicio</option>
+                        <option>No se encuentra</option>
                     </select>
                 </div>
             </div>
