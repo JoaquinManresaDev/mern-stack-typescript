@@ -19,25 +19,25 @@ export default function CreateTask(props: any) {
         <div className="container">
             <div className="row">
                 <div className="col-md-12 mrgnbtm">
-                <h2>ToDo List</h2>
+                <h2>Listado inventario</h2>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="row mrgnbtm">
                         <div className="form-group col-md-6">
-                            <label htmlFor="exampleInputEmail1">Task</label>
-                            <input {...register("task")} placeholder="Create a Task" className="form-control" name="task" id="task" />
+                            <label htmlFor="exampleInputEmail1">Modelo</label>
+                            <input {...register("task")} placeholder="Agregar modelo" className="form-control" name="task" id="task" />
                         </div>
                         <div className="form-group col-md-6">
-                            <label htmlFor="exampleInputPassword1">Assignee</label>
-                            <input {...register("assignee")} placeholder="Assignee" className="form-control" name="assignee" id="assignee" />
+                            <label htmlFor="exampleInputPassword1">Descripcion</label>
+                            <input {...register("descripcion")} placeholder="Assignee" className="form-control" name="assignee" id="assignee" />
                         </div>
                     </div>
                     <div className="row mrgnbtm">
                         <div className="form-group col-md-12">
                             <label htmlFor="exampleInputEmail1">Status:</label>
                             <select className="form-control" {...register("status")}>
-                                <option>To Be Done</option>
-                                <option>In Progress</option>
-                                <option>Completed</option>
+                                <option>Funcionando</option>
+                                <option>Fuera de servicio</option>
+                                <option>No se encuentra</option>
                             </select>
                         </div>
                     </div>

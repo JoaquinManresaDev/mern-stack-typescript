@@ -40,13 +40,13 @@ export const Tasks = ({tasks, deleteTask, taskEdited}: ITasks) => {
 
     return(
         <div className="container">
-            <h2>Tasks</h2>
+            <h2>Inventario</h2>
             <table className="table table-bordered">
                 <thead>
                 <tr>
-                    <th>Task Id</th>
-                    <th>Task Name</th>
-                    <th>Assignee</th>
+                    <th>Id</th>
+                    <th>Modelo</th>
+                    <th>Descripcion</th>
                     <th>Status</th>
                 </tr>
                 </thead>
